@@ -398,16 +398,11 @@ sock.sendMessage(m.chat, {
 })
 
 // pin chat
-sock.sendMessage(m.chat, { 
-  pin: { 
-    key: m.key, 
+sock.sendMessage(m.chat, {
+  pin: {
+    type: 1, // type 1 pin, type 2 unpin
+    key: m.key,
     time: 86400 // default time 86400
-  }
-})
-
-sock.sendMessage(m.chat, { 
-  unpin: { 
-    key: m.key 
   }
 })
 
